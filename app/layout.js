@@ -1,6 +1,7 @@
 import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
-import Layout from './_components/Common/Layout'
+import Header from './_components/Common/Header'
+import Footer from './_components/Common/Footer'
 
 const inter = Outfit({ subsets: ['latin'] })
 
@@ -10,5 +11,11 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  return <Layout>{children}</Layout>
+  return (
+    <html lang='en'>
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  )
 }
